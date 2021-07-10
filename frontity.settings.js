@@ -15,7 +15,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://jsnation2020.frontity.org"
+          "url": "http://mateusfaustino.com.br"
         }
       }
     },
