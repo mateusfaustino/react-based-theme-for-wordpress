@@ -45,7 +45,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://test.frontity.org"
+          "api": "https://jsnation2020.frontity.org/wp-json"
         }
       }
     },
