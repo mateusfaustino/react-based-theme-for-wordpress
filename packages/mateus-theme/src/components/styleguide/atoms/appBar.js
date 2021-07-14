@@ -1,8 +1,11 @@
 import { AppBar } from '@material-ui/core';
 import {styled} from '@material-ui/core/styles'
 import { palette } from './colors';
+import { useScreen } from '../../../contexts/Screen';
 const StyledAppBar = styled(AppBar)({
     //Styles applied to the root element if color="primary".
+    
+    transform: 'translateY'(props=>props.isDisplayed?`0`:'-40px'),
     '&.MuiAppBar-colorPrimary':{
         background:palette.primary.main,
         color:palette.primary.onMainText,
@@ -15,9 +18,11 @@ const StyledAppBar = styled(AppBar)({
 
 })
 
-const appBar = (props)=>{
+const AppBarComponent = (props)=>{
+    const {scrollDirection} = useScreen();
     return(
         <StyledAppBar 
+            
             color={props.color}
             position={props.position}
             >{props.children}
@@ -25,5 +30,5 @@ const appBar = (props)=>{
     )
 }
 
-export default appBar
+export default AppBarComponent
 

@@ -15,7 +15,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "http://mateusfaustino.com.br"
+          "url": "https://www.bbcamerica.com"
         }
       }
     },

@@ -1,8 +1,9 @@
-import { createGlobalStyle } from 'styled-components';
-import {palette} from './colors';
+import { connect, styled,Global as global,css } from "frontity"
 import scroll from './scroll'
 
-const GlobalStyle = createGlobalStyle`
+const Globalstyle = (props) => 
+<Globalstyle
+  styles={css`
   *{
     margin: 0;
     padding: 0;
@@ -11,12 +12,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body{
-    background: ${(props)=>props.theme=='dark'? palette.background.dark:palette.background.main};
-    color:${(props)=>props.theme=='dark'? palette.background.onDarkText:palette.background.onLightText};
     ${scroll}
   }
-  #switchTag{
-  }
+  
   li{
     list-style:none;
   }
@@ -24,10 +22,10 @@ const GlobalStyle = createGlobalStyle`
     text-decoration:none;
     color:#000;
   }
-`
-const Global = (props) => 
-  <GlobalStyle
-    theme={props.theme}
-  />
     
-export default Global
+    
+    `
+}
+/>
+    
+export default Globalstyle

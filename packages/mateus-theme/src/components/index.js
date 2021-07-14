@@ -1,32 +1,56 @@
 import Link from '@frontity/components/link'
-import {connect} from 'frontity'
 import Switch from "@frontity/components/switch"
+import { connect, Global, css } from "frontity"
 import List from './list'
 import Post from './post'
 import Page from './page'
+import Navbar from './styleguide/molecules/navbar'
+import ScreenProvider from '../contexts/Screen'
+import SpacingProvider from '../contexts/SpacingContext'
+import typography from './styleguide/atoms/typography'
 
 const Root = ({ state }) => {
   const data = state.source.get(state.router.link)
 
   return (
     <>
-      <h1>Hello Frontity</h1>
-      <p>Current URL: {state.router.link}</p>
-      <nav>
-        <Link link="/">Home</Link>
-        <br />
-        <Link link="/page/2">More posts</Link>
-        <br />
-        <Link link="/about-us">About Us</Link>
-      </nav>
-      <hr />
-      <main>
-        <Switch>
-          <List when={data.isArchive}/>
-          <Post when={data.isPost}/>
-          <Page when={data.isPage}/>
-        </Switch>
-      </main>
+      <Global
+        styles={css`
+          html {
+            font-family: 'Roboto', sans-serif;
+          }
+          *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+          iframe{
+            width:80vw;
+            height:auto;
+          }
+          li{
+            list-style:none;
+          }
+          a{
+            text-decoration:none;
+            color:#000;
+          }
+          p{
+            ${typography.paragraph}
+          }
+          `}
+          />
+      <SpacingProvider>
+
+        <Navbar/>
+        
+          <Switch>
+            <List when={data.isArchive}/>
+            <Post when={data.isPost}/>
+            <Page when={data.isPage}/>
+          </Switch>
+        
+      </SpacingProvider>
     </>
   )
 }
