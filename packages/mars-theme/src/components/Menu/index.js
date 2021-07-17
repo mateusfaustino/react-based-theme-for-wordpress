@@ -1,7 +1,7 @@
 import { styled, connect, Global, Head } from "frontity";
-import { CloseIcon, HamburgerIcon } from "./menu-icon";
-import MenuModal from "./menu-modal";
-
+import { CloseIcon, HamburgerIcon } from "../MenuIcons";
+import MenuModal from "../MenuModal";
+import {MenuToggle} from './styles'
 /**
  * The menu that should be displayed on mobile devices displaying links to
  * various categories and pages. This component contains mostly logic and
@@ -64,24 +64,5 @@ function MobileMenu({ state, actions }) {
     </>
   );
 }
-
-const MenuToggle = styled.button`
-  position: absolute;
-  right: 24px;
-  top: 24px;
-  background: transparent;
-  border: 0;
-  color: white;
-  z-index: 5;
-  height: 40px;
-  width: 40px;
-  display: none;
-
-  @media (max-width: 560px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-`;
 
 export default connect(MobileMenu);

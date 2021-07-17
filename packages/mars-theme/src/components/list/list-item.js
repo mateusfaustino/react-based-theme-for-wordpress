@@ -1,6 +1,6 @@
 import { connect, styled } from "frontity";
-import Link from "../link";
-import FeaturedMedia from "../featured-media";
+import Link from "../Link";
+import FeaturedMedia from "../FeaturedMedia";
 
 /**
  * Item Component

@@ -1,12 +1,12 @@
-import { Global, connect, Head } from "frontity";
+import { Global, connect} from "frontity";
 import Switch from "@frontity/components/switch";
-import Header from "./header";
+import Header from "./Header";
 import List from "./List";
-import Post from "./post";
-import Loading from "./loading";
-import Title from "./title";
-import PageError from "./page-error";
-import {globalStyles, HeadContainer, Main} from './styles'
+import Post from "./Post";
+import Loading from "./Loading";
+import Title from "./Title";
+import PageError from './Page404';
+import {globalStyles, Main} from './styles'
 import HeadTag from "./HeadTag";
 
 const Theme = ({ state }) => {
@@ -17,13 +17,8 @@ const Theme = ({ state }) => {
     <>
       <Title />
       <HeadTag/>
-
       <Global styles={globalStyles} />
-
-      <HeadContainer>
-        <Header />
-      </HeadContainer>
-
+      <Header />
       <Main>
         <Switch>
           <Loading when={data.isFetching} />

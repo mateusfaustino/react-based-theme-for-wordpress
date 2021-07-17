@@ -6,20 +6,6 @@ const scale = keyframes`
   100% {transform: scaley(1.0)}
 `;
 
-const Loading = () => (
-  <Container>
-    <div>
-      <div css={bar(1)} />
-      <div css={bar(2)} />
-      <div css={bar(3)} />
-      <div css={bar(4)} />
-      <div css={bar(5)} />
-    </div>
-  </Container>
-);
-
-export default Loading;
-
 const bar = (index) => css`
   background-color: rgba(12, 17, 43, 0.3);
   width: 4px;
