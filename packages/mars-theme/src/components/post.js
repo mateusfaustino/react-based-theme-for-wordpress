@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { connect, styled } from "frontity";
 import Link from "./link";
-import List from "./list";
+import List from "./List";
 import FeaturedMedia from "./featured-media";
 
 /**
