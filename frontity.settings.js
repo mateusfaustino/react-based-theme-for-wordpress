@@ -15,7 +15,14 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://www.bbcamerica.com"
+          "url": "https://test.frontity.org",
+          "postTypes": [
+            {
+              type: "destinations",
+              endpoint: "destinations",
+              archive: "/destinations"
+            }
+          ]
         }
       }
     },

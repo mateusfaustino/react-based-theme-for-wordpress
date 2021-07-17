@@ -1,4 +1,5 @@
 import Root from "./components";
+import link from "@frontity/html2react/processors/link";
 
 export default {
   name: "mateus-theme",
@@ -6,9 +7,16 @@ export default {
     theme: Root
   },
   state: {
-    theme: {}
+    theme: {
+      isUrlVisible: true,
+    }
   },
   actions: {
     theme: {}
+  },
+  libraries: {
+    html2react: {
+      processors: [link]
+    }
   }
 };
