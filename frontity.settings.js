@@ -10,7 +10,7 @@ const settings = {
   "packages": [
     
 {
-  name: "@frontity/mars-theme",
+  name: "matt-theme",
   state: {
     theme: {
       menu: [
@@ -31,7 +31,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://test.frontity.org",
+          "url": "http://mateus.infinityfreeapp.com/",
           "postTypes": [
             {
               type: "destinations",

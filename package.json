@@ -24,6 +24,7 @@
     "@frontity/wp-source": "^1.11.5",
     "dayjs": "^1.10.6",
     "frontity": "^1.16.1",
-    "mateus-theme": "file:packages/mateus-theme"
+    "mateus-theme": "file:packages/mateus-theme",
+    "matt-theme": "file:packages/matt-theme"
   }
 }

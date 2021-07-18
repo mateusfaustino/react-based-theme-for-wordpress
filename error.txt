@@ -1,0 +1,28 @@
+
+
+=> Description of my issue:
+
+
+=> Specific errors I'm getting in the terminal
+    
+    FetchError: invalid json response body at http://mateus.infinityfreeapp.com/wp-json/wp/v2/posts?_embed=true&page=1 reason: Unexpected token < in JSON at position 0
+      at eval (webpack-internal:///./node_modules/node-fetch/lib/index.mjs:276:32)
+      at eval (webpack-internal:///./node_modules/@frontity/react-easy-state/dist/bundle.js:58:245) 
+      at batchedUpdates$1 (webpack-internal:///./node_modules/react-dom/cjs/react-dom.development.js:3767:145)
+      at batch (webpack-internal:///./node_modules/@frontity/react-easy-state/dist/bundle.js:58:237)      at Object.apply (webpack-internal:///./node_modules/@frontity/react-easy-state/dist/bundle.js:61:179)
+      at runMicrotasks (<anonymous>)
+      at processTicksAndRejections (internal/process/task_queues.js:97:5)
+      at populate (webpack-internal:///./node_modules/@frontity/wp-source/src/libraries/populate.ts:27:12)
+      at Object.eval (webpack-internal:///./node_modules/@frontity/wp-source/src/libraries/handlers/postTypeArchive.ts:37:13)
+      at eval (webpack-internal:///./node_modules/@frontity/wp-source/src/actions.ts:40:1)
+
+
+=> Specific errors I'm getting in the browser’s console:
+    GET http://localhost:3000/ 500 (Internal Server Error)
+
+=> The repository with the code of my project:
+
+=> A deployed version of your site
+
+=> The URL of your WP REST API
+
