@@ -8,17 +8,17 @@ import Title from "./Title";
 import PageError from './Page404';
 import {globalStyles, Main} from './styles'
 import HeadTag from "./HeadTag";
-
+import  SpacingProvider from '../contexts/SpacingContext'
 const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
 
   return (
-    <>
+    <SpacingProvider>
       <Title />
       <HeadTag/>
       <Global styles={globalStyles} />
-      <Header />
+      <Header/>
       <Main>
         <Switch>
           <Loading when={data.isFetching} />
@@ -27,7 +27,8 @@ const Theme = ({ state }) => {
           <PageError when={data.isError} />
         </Switch>
       </Main>
-    </>
+    </SpacingProvider>
+    
   );
 };
 

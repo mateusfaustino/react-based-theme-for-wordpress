@@ -1,6 +1,5 @@
-import { connect, styled } from "frontity";
-import Nav from "../Nav";
-import MobileMenu from "../Menu";
+import { connect } from "frontity";
+import NavBar from '../styleguide/molecules/navbar'
 import {Container, StyledLink, Description, Title, HeadContainer} from './styles'
 
 const Header = ({ state }) => {
@@ -11,9 +10,8 @@ const Header = ({ state }) => {
           <Title>{state.frontity.title}</Title>
         </StyledLink>
         <Description>{state.frontity.description}</Description>
-        <MobileMenu />
       </Container>
-      <Nav />
+      <NavBar/>
     </HeadContainer>
    
   );

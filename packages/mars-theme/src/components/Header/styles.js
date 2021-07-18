@@ -1,14 +1,16 @@
 import {styled } from "frontity";
 import Link from "../Link";
+import { palette } from "../styleguide/atoms/colors";
 export const Container = styled.div`
   width: 848px;
   max-width: 100%;
   box-sizing: border-box;
   padding: 24px;
-  color: #fff;
+  color: ${palette.primary.onMainText};
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin-top:40px;
 `;
 
 export const Title = styled.h2`
@@ -28,5 +30,5 @@ export const HeadContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #1f38c5;
+  background-color: ${palette.primary.main};
 `;

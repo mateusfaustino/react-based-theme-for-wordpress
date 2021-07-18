@@ -60,7 +60,7 @@ const Root = ({ state }) => {
             <Loading when={data.isFetching}/>
             <Error when={data.isError} />
           </Switch>
-          </SpacingProvider>
+      </SpacingProvider>
     </>
   )
 }
