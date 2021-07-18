@@ -21,8 +21,7 @@ const StyledContainer = styled.div`
     right:0;
     top:0;
     transition:1s;
-    z-index:10000;
+    z-index:1000;
     position:fixed;
     width:100%;
-
 `

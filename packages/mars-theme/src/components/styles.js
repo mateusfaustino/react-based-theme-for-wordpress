@@ -42,4 +42,5 @@ export const Main = styled.div`
     rgba(66, 174, 228, 0.1),
     rgba(66, 174, 228, 0)
   );
+  
 `;

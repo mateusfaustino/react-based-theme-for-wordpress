@@ -19,11 +19,11 @@ const Theme = ({ state }) => {
       <HeadTag/>
       <Global styles={globalStyles} />
       <Header/>
-      <Main>
+      <Main >
         <Switch>
           <Loading when={data.isFetching} />
           <List when={data.isArchive} />
-          <Post when={data.isPostType} />
+          <Post when={data.isPostType} active={data.isPostType}/>
           <PageError when={data.isError} />
         </Switch>
       </Main>

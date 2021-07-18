@@ -22,7 +22,7 @@ import {Container, Title, StyledLink, Author, DateWrapper, Content} from './styl
  *
  * @returns The {@link Post} element rendered.
  */
-const Post = ({ state, actions, libraries }) => {
+const Post = ({ state, actions, libraries, active }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
   // Get the data of the post.
@@ -47,7 +47,7 @@ const Post = ({ state, actions, libraries }) => {
 
   // Load the post, but only if the data is ready.
   return data.isReady ? (
-    <Container>
+    <Container active={active}>
       <div>
         <Title dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
 

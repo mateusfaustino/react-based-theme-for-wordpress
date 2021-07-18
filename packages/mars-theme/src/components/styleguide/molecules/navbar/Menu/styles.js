@@ -14,9 +14,9 @@ const StyledContainer = styled.ul`
     width: 100%;
     height: calc(100vh - 40px);
     z-index: 0;
-    border-top: 1px solid #fff;
-    transform: translateX(${props => props.active ? '0' : '-100' }vw);
+    transform: translateX(${props => props.active ? '0' : '100vw' });
     transition: 1s;
+    z-index:-1;
 
 
 
