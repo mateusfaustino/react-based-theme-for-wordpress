@@ -1,19 +1,16 @@
 import { connect, styled } from "frontity"
-
 const StyledContainer = styled.div`
-        svg{
+        img{
             width:auto;
-            height:100%;
+            height:44px;
             
         }
 &.onDark{
-    img{
+    svg{
         #wave-up{
             fill:#fff;
         }
-        #wave-center{
-            fill:#fff;
-        }
+        
         #wave-down{
             fill:#fff;
         }
@@ -36,16 +33,15 @@ const StyledContainer = styled.div`
             #hull-left{
                 fill:#cacaca;
             }
-
         }
     }
 }
 `
 const Container = (props)=>{
-return(
-<StyledContainer className='onDark'>
-{props.children}
-</StyledContainer>
-)
+    return(
+        <StyledContainer className='onDark'>
+        {props.children}
+        </StyledContainer>
+    )
 }
 export default Container

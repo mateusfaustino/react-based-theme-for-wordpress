@@ -1,7 +1,26 @@
-import { connect, styled } from "frontity"
-
+import {styled} from "frontity"
 import { useSpacing } from "../../../../contexts/SpacingContext"
 import { palette } from "../../atoms/colors"
+const StyledContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+    max-width:700px;
+`
+export const NavWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index:10000;
+    position:fixed;
+    top:0;
+    width:100%;
+    right:0;
+    background:${props=>props.isActive? palette.primary.dark :palette.primary.main};
+    transition:0.5s;
+    padding:2px ${props=>props.spacing.margin};
+`
 
 const Nav = (props)=>{
     const { spacing } = useSpacing()
@@ -12,16 +31,3 @@ const Nav = (props)=>{
     )
 }
 export default Nav
-const StyledContainer = styled.div`
-    background:${props=>props.isActive? palette.primary.dark :palette.primary.main};
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding:4px ${props=>props.spacing.margin};
-    right:0;
-    top:0;
-    transition:1s;
-    z-index:1000;
-    position:fixed;
-    width:100%;
-`
