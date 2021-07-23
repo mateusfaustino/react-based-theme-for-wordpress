@@ -1,4 +1,5 @@
 import { Global, css, connect, styled, Head } from "frontity";
+import { palette } from "./styleguide/atoms/colors";
 import typography from './styleguide/atoms/typography'
 export const globalStyles = css`
   
@@ -37,10 +38,6 @@ export const globalStyles = css`
 export const Main = styled.div`
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(
-    180deg,
-    rgba(66, 174, 228, 0.1),
-    rgba(66, 174, 228, 0)
-  );
+  background: ${palette.background.main};
   
 `;

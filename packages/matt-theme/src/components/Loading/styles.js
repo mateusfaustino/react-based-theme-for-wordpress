@@ -1,32 +1,31 @@
-import { styled, keyframes, css } from "frontity";
+import {styled, keyframes} from 'frontity'
+const spin = keyframes`
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+`
 
-const scale = keyframes`
-  0% {transform: scaley(1.0)}
-  50% {transform: scaley(0.4)}
-  100% {transform: scaley(1.0)}
-`;
+const StyledContainer = styled.div`
+display:flex;
+align-items:center;
+justify-content:center;
+width: 100%;
+height: 100vh;
 
-const bar = (index) => css`
-  background-color: rgba(12, 17, 43, 0.3);
-  width: 4px;
-  height: 24px;
-  margin: 3px;
-  border-radius: 0;
-  display: inline-block;
-  animation: ${scale} 1s ${index * 0.1}s infinite
-    cubic-bezier(0.2, 0.68, 0.18, 1.08);
-  animation-fill-mode: both;
-`;
+`
+const Spinner = styled.dic`
+border: 12px solid #eee;
+border-top: 12px solid steelblue;
+border-radius: 50%;
+width: 80px;
+height: 80px;
+animation: ${spin} 0.5s linear infinite;
+`
+const Container = (props) => {
+    return(
+        <StyledContainer>
+            <Spinner/>
+        </StyledContainer>
+    )
+}
 
-const Container = styled.div`
-  width: 800px;
-  margin: 0;
-  padding: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  & > * {
-    margin-top: 24px;
-  }
-`;
+export default Container

@@ -3,7 +3,7 @@ const settings = {
   "state": {
     "frontity": {
       "url": "https://test.frontity.org",
-      "title": "Test Frontity Blog",
+      "title": "Mateus Faustino",
       "description": "WordPress installation for Frontity development"
     }
   },
@@ -11,27 +11,28 @@ const settings = {
     
 {
   name: "matt-theme",
+  // name: "mateus-theme",
   state: {
     theme: {
       menu: [
         ["Home", "/"],
-        ["Nature", "/category/nature/"],
-        ["Travel", "/category/travel/"],
-        ["Japan", "/tag/japan/"],
-        ["About Us", "/about-us/"]
+        ["Books", "/books/"],
+        ["Films", "/films/"],
+        ["Events", "/tour/"],
+        ["About", "/about/"]
       ],
       featured: {
         showOnList: true,
         showOnPost: true
       }
     }
-  }
+  },
 },
     {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://test.frontity.org",
+          "url": "http://104.248.56.224/",
           "postTypes": [
             {
               type: "destinations",
@@ -46,5 +47,4 @@ const settings = {
     "@frontity/html2react"
   ]
 };
-
 export default settings;
