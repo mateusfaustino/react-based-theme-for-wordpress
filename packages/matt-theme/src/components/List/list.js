@@ -1,13 +1,15 @@
 import { connect, styled, decode } from "frontity";
 import Item from "./list-item";
 import Pagination from "./pagination";
+import { useSpacing } from "../../contexts/SpacingContext";
 
 const List = ({ state }) => {
   // Get the data of the current list.
   const data = state.source.get(state.router.link);
-
+  const {spacing,maxWidth} = useSpacing()
+  const margin = spacing.margin
   return (
-    <Container>
+    <Container margin={margin} maxWidth={maxWidth}>
       {/* If the list is a taxonomy, we render a title. */}
       {data.isTaxonomy && (
         <Header>
@@ -37,10 +39,11 @@ const List = ({ state }) => {
 export default connect(List);
 
 const Container = styled.section`
-  width: 800px;
-  margin: 0;
-  padding: 24px;
+  
   list-style: none;
+  width: 100%;
+  max-width: ${({maxWidth})=>maxWidth}; 
+  margin: 0 ${({margin})=>margin};
 `;
 
 const Header = styled.h3`

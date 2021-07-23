@@ -46,9 +46,11 @@ const Post = ({ state, actions, libraries, active }) => {
     List.preload();
   }, [actions.source]);
 
+  const {spacing, maxWidth} = useSpacing()
+  const margin = spacing.margin
   // Load the post, but only if the data is ready.
   return data.isReady ? (
-    <Container active={active}>
+    <Container active={active} margin={margin} maxWidth={maxWidth}>
       <div>
         <Title dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
         <Excerpt dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />

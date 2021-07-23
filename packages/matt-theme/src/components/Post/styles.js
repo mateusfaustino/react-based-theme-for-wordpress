@@ -2,9 +2,9 @@ import Link from "../Link";
 import { styled } from "frontity";
 import typography from "../styleguide/atoms/typography";
 export const Container = styled.div`
-  width: 800px;
-  margin: 0;
-  padding: 24px;
+  width: 100%;
+  max-width: ${({maxWidth})=>maxWidth}; 
+  margin: 0 ${({margin})=>margin};
 
 `;
 export const Excerpt = styled.div`
