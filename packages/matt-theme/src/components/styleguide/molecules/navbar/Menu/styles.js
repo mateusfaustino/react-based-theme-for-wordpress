@@ -10,7 +10,7 @@ background:${palette.primary.dark};
 position: fixed;
 top: 52px;
 right: 0;
-width: 80%;
+width: 70%;
 height: calc(100vh - 40px);
 z-index: 0;
 transform: translateX(${props => props.active ? '0' : '100vw' });

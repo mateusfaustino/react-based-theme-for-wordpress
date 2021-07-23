@@ -1,9 +1,9 @@
 
  export const palette = {
     primary: {
-        main: '#0277bd',
+        main: '#101619',
         light: '#62a3ff',
-        dark: '#004c8c',
+        dark: '#0a0d0f',
         onMainText:'#fff',
         onDarkText: '#fff',
         onLightText: '#000',

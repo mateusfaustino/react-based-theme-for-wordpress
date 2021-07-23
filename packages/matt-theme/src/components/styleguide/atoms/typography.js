@@ -125,6 +125,37 @@ const tiny_italic = (color) =>`
         line-height: 120%;
     }
 `
+const postTitle = `
+    color: #101619;
+    font-weight: 700;
+    font-size: 2.2em;
+    line-height: 1em;
+
+    @media (min-width:${breakpoints.mobile}) {
+        font-size: 2.2em;
+        line-height: 1em;
+    }
+`
+const postExcerpt = `
+    color: #101619;
+    font-size: 1.3em;
+    letter-spacing: -.03em;
+    line-height: 1.3em;
+    margin-top: .6em;
+    font-weight: 400;
+
+    @media (min-width:${breakpoints.mobile}) {
+        font-size: 1.3em;
+        line-height: 1em;
+    }
+`
+const postContent = `
+    color: #101619;
+    font-size: 1.15em;
+    line-height: 155%;
+    margin: 1em 0;
+    font-family: titillium web,Segoe,Segoe UI,Arial,sans-serif;
+`
 
 const scratched = (color) =>`
     color: ${handleDefault(color,colors.text_onLight)};
@@ -151,7 +182,10 @@ const typographies = {
     small:small,
     smallBold:small_bold,
     smallScratched:scratched,
-    tinyItalic:tiny_italic
+    tinyItalic:tiny_italic,
+    postTitle:postTitle,
+    postExcerpt:postExcerpt,
+    postContent:postContent
 }
 
 export default typographies

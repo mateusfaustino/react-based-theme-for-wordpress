@@ -2,7 +2,8 @@ import { useEffect } from "react";
 import { connect} from "frontity";
 import List from "../List";
 import FeaturedMedia from "../FeaturedMedia";
-import {Container, Title, StyledLink, Author, DateWrapper, Content} from './styles'
+import {Container, Title, StyledLink, Author, DateWrapper, Content, Excerpt} from './styles'
+import { useSpacing } from "../../contexts/SpacingContext";
 /**
  * The Post component that Mars uses to render any kind of "post type", like
  * posts, pages, attachments, etc.
@@ -50,20 +51,20 @@ const Post = ({ state, actions, libraries, active }) => {
     <Container active={active}>
       <div>
         <Title dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-
+        <Excerpt dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
         {/* Hide author and date on pages */}
         {!data.isPage && (
           <div>
             {author && (
               <StyledLink link={author.link}>
                 <Author>
-                  By <b>{author.name}</b>
+                  por <b>{author.name}</b>
                 </Author>
               </StyledLink>
             )}
             <DateWrapper>
               {" "}
-              on <b>{date.toDateString()}</b>
+              em <b>{date.toDateString()}</b>
             </DateWrapper>
           </div>
         )}

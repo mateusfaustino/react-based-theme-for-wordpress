@@ -4,7 +4,7 @@ const settings = {
     "frontity": {
       "url": "https://test.frontity.org",
       "title": "Mateus Faustino",
-      "description": "WordPress installation for Frontity development"
+      "description": "Olá! Me chamo Mateus e aqui compartilho minhas andanças, visão de mundo e nerdices."
     }
   },
   "packages": [

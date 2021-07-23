@@ -1,18 +1,24 @@
 import Link from "../Link";
 import { styled } from "frontity";
+import typography from "../styleguide/atoms/typography";
 export const Container = styled.div`
   width: 800px;
   margin: 0;
   padding: 24px;
 
 `;
-
+export const Excerpt = styled.div`
+  p{
+    ${typography.postExcerpt}
+  }
+`
 export const Title = styled.h1`
   margin: 0;
   margin-top: 24px;
   margin-bottom: 8px;
   color: rgba(12, 17, 43);''
-`;
+  ${typography.postTitle}
+  `;
 
 export const StyledLink = styled(Link)`
   padding: 15px 0;
@@ -37,13 +43,13 @@ export const DateWrapper = styled.p`
 export const Content = styled.div`
   color: rgba(12, 17, 43, 0.8);
   word-break: break-word;
-
+  background:#fff;
   * {
     max-width: 100%;
   }
 
   p {
-    line-height: 1.6em;
+    ${typography.postContent}
   }
 
   img {
