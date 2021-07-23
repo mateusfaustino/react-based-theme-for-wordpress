@@ -1,9 +1,9 @@
 import React from 'react'
 import Container from './styles'
 import Brand from '../../../atoms/Brand'
-const Logo = () => {
+const Logo = (props) => {
     return(
-        <Container>
+        <Container isActive={props.isActive}>
             <Brand/>
         </Container>
     )

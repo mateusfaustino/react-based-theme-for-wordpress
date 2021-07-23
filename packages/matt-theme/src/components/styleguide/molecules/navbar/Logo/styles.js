@@ -1,5 +1,4 @@
-import { connect, styled } from "frontity"
-
+import { styled } from 'frontity'
 const StyledContainer = styled.div`
     
 `
