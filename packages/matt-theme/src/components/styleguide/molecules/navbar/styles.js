@@ -1,4 +1,4 @@
-import { styled } from "frontity"
+import { connect, styled } from "frontity"
 
 import { useSpacing } from "../../../../contexts/SpacingContext"
 import { palette } from "../../atoms/colors"
@@ -6,7 +6,7 @@ import { palette } from "../../atoms/colors"
 const Nav = (props)=>{
     const { spacing } = useSpacing()
     return(
-        <StyledContainer isActive={props.isActive}  spacing={spacing}>
+        <StyledContainer isActive={props.isActive} isDisplayed={props.isDisplayed} spacing={spacing}>
             {props.children}
         </StyledContainer>
     )

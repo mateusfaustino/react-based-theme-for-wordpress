@@ -2,17 +2,19 @@ import React from 'react'
 import Container from './styles'
 import Item from './Item'
 import {menu} from '../../../../../matt.settings'
-const Menu = (props) => {
+import {connect} from   'frontity'
+const Menu = ({isActive,state,setIsActive}) => {
+    const { menu } = state.theme;
     return( 
-        <Container active={props.isActive} >
-            {menu.map((item,index)=>{
-                return(
-                    <Item>
-                        title
-                    </Item>
-                )
-            })}
+        <Container active={isActive} >
+        {menu.map(([name, link])=>{
+            return(
+                <Item onClick={setIsActive} to={link} key={name} isPage={state.router.link === link?true:false}>
+                    {name}
+                </Item>
+            )
+        })}
         </Container>
     )
 }
-export default Menu
+export default connect(Menu)
