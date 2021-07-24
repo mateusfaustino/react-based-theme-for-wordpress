@@ -4,6 +4,8 @@ import List from "../List";
 import FeaturedMedia from "../FeaturedMedia";
 import {Container, Title, StyledLink, Author, DateWrapper, Content, Excerpt} from './styles'
 import { useSpacing } from "../../contexts/SpacingContext";
+import dayjs from "dayjs"
+import {PostDate} from '../Date/index'
 /**
  * The Post component that Mars uses to render any kind of "post type", like
  * posts, pages, attachments, etc.
@@ -31,8 +33,7 @@ const Post = ({ state, actions, libraries, active }) => {
   // Get the data of the author.
   const author = state.source.author[post.author];
   // Get a human readable date.
-  const date = new Date(post.date);
-
+  
   // Get the html2react component.
   const Html2React = libraries.html2react.Component;
 
@@ -44,7 +45,7 @@ const Post = ({ state, actions, libraries, active }) => {
   useEffect(() => {
     actions.source.fetch("/");
     List.preload();
-  }, [actions.source]);
+  }, [actions.source]); 
 
   const {spacing, maxWidth} = useSpacing()
   const margin = spacing.margin
@@ -66,7 +67,9 @@ const Post = ({ state, actions, libraries, active }) => {
             )}
             <DateWrapper>
               {" "}
-              em <b>{date.toDateString()}</b>
+              em <b>{PostDate(post.date)}</b>
+    
+              
             </DateWrapper>
           </div>
         )}

@@ -127,26 +127,33 @@ const tiny_italic = (color) =>`
 `
 const postTitle = `
     color: #101619;
-    font-weight: 700;
     font-size: 2.2em;
-    line-height: 1em;
-
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: normal;
+    line-height: 1.2;
+    text-transform: none;
+    margin-bottom: .6rem;
+    font-family: "adelle-sans",Helvetica,sans-serif;
     @media (min-width:${breakpoints.mobile}) {
-        font-size: 2.2em;
-        line-height: 1em;
+        
     }
 `
 const postExcerpt = `
-    color: #101619;
-    font-size: 1.3em;
-    letter-spacing: -.03em;
-    line-height: 1.3em;
+    
+    
     margin-top: .6em;
+    font-family: "adelle-sans",Helvetica,sans-serif;
+    font-style: italic;
     font-weight: 400;
-
+    letter-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    font-size: 1.2em;
+    color: #6A6A6A;
+    margin-bottom: .6rem;
     @media (min-width:${breakpoints.mobile}) {
-        font-size: 1.3em;
-        line-height: 1em;
+        
     }
 `
 const postContent = `
@@ -154,7 +161,9 @@ const postContent = `
     font-size: 1.15em;
     line-height: 155%;
     margin: 1em 0;
-    font-family: titillium web,Segoe,Segoe UI,Arial,sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color:#424242;
 `
 
 const scratched = (color) =>`

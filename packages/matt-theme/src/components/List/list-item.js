@@ -1,6 +1,7 @@
 import { connect, styled } from "frontity";
 import Link from "../Link";
 import FeaturedMedia from "../FeaturedMedia";
+import { PostDate } from "../Date";
 
 /**
  * Item Component
@@ -12,7 +13,6 @@ import FeaturedMedia from "../FeaturedMedia";
  */
 const Item = ({ state, item }) => {
   const author = state.source.author[item.author];
-  const date = new Date(item.date);
 
   return (
     <article>
@@ -25,13 +25,13 @@ const Item = ({ state, item }) => {
         {author && (
           <StyledLink link={author.link}>
             <AuthorName>
-              By <b>{author.name}</b>
+              Por <b>{author.name}</b>
             </AuthorName>
           </StyledLink>
         )}
         <PublishDate>
           {" "}
-          on <b>{date.toDateString()}</b>
+          em <b>{PostDate(item.date)}</b>
         </PublishDate>
       </div>
 
