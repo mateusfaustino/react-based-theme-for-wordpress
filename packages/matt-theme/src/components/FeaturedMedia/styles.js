@@ -2,8 +2,8 @@ import Image from "@frontity/components/image";
 import { styled } from "frontity";
 
 export const Container = styled.div`
-  margin-top: 16px;
-  height: 300px;
+  grid-area: featured;
+  width:100%;
   ${({ isAmp }) => isAmp && "position: relative;"};
 `;
 

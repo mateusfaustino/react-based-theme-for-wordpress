@@ -10,7 +10,8 @@ const List = ({ state }) => {
   const margin = spacing.margin
   return (
     <Container margin={margin} maxWidth={maxWidth}>
-      {/* If the list is a taxonomy, we render a title. */}
+{/*       
+      If the list is a taxonomy, we render a title.
       {data.isTaxonomy && (
         <Header>
           {data.taxonomy}:{" "}
@@ -19,11 +20,13 @@ const List = ({ state }) => {
       )}
 
       {/* If the list is for a specific author, we render a title. */}
+     {/*
       {data.isAuthor && (
         <Header>
           Author: <b>{decode(state.source.author[data.id].name)}</b>
         </Header>
-      )}
+      )} 
+      */}
 
       {/* Iterate over the items of the list. */}
       {data.items.map(({ type, id }) => {

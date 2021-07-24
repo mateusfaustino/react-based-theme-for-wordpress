@@ -15,6 +15,7 @@ height: calc(100vh - 40px);
 z-index: 0;
 transform: translateX(${props => props.active ? '0' : '100vw' });
 transition: 1s;
+border-top: 1px solid #fff;
 @media screen and (min-width: 755px) {
         display: flex;
         justify-content: center;
