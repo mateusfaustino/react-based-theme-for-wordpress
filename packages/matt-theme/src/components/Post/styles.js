@@ -4,7 +4,7 @@ import typography from "../styleguide/atoms/typography";
 export const Container = styled.div`
   width: 100%;
   max-width: ${({maxWidth})=>maxWidth}; 
-  margin: 0 ${({margin})=>margin};
+  margin: 54px ${({margin})=>margin};
 
 `;
 export const Excerpt = styled.div`

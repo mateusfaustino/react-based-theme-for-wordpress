@@ -1,6 +1,5 @@
 import { Global, connect} from "frontity";
 import Switch from "@frontity/components/switch";
-import Header from "./Header";
 import List from "./List";
 import Post from "./Post";
 import Loading from "./Loading";
@@ -9,6 +8,7 @@ import PageError from './Page404';
 import {globalStyles, Main} from './styles'
 import HeadTag from "./HeadTag";
 import  SpacingProvider from '../contexts/SpacingContext'
+import Navbar from '../components/styleguide/molecules/navbar'
 const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
@@ -18,7 +18,7 @@ const Theme = ({ state }) => {
       <Title />
       <HeadTag/>
       <Global styles={globalStyles} />
-      <Header/>
+      <Navbar/>
       <Main >
         <Switch>
           <Loading when={data.isFetching} />

@@ -62,7 +62,6 @@ const Title = styled.h1`
   color: rgba(12, 17, 43);
   margin: 0;
   box-sizing: border-box;
-  font-size: 1em;
 `;
 
 const AuthorName = styled.span`

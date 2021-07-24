@@ -53,6 +53,10 @@ const Post = ({ state, actions, libraries, active }) => {
   return data.isReady ? (
     <Container active={active} margin={margin} maxWidth={maxWidth}>
       <div>
+        {/* Look at the settings to see if we should include the featured image */}
+        {state.theme.featured.showOnPost && (
+          <FeaturedMedia id={post.featured_media} />
+        )}
         <Title dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
         <Excerpt dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
         {/* Hide author and date on pages */}
@@ -66,19 +70,11 @@ const Post = ({ state, actions, libraries, active }) => {
               </StyledLink>
             )}
             <DateWrapper>
-              {" "}
-              em <b>{PostDate(post.date)}</b>
-    
-              
+              {" "}em <b>{PostDate(post.date)}</b>
             </DateWrapper>
           </div>
         )}
       </div>
-
-      {/* Look at the settings to see if we should include the featured image */}
-      {state.theme.featured.showOnPost && (
-        <FeaturedMedia id={post.featured_media} />
-      )}
 
       {data.isAttachment ? (
         // If the post is an attachment, just render the description property,

@@ -9,7 +9,7 @@ export const HeadContainer = styled.div`
   justify-content:center;
   flex-direction: column;
   background-color: ${palette.background.light};
-  margin: 54px ${({margin})=> margin} 0;
+  margin: 73px 0 0;
   `;
 export const Container = styled.div`
 width: 100%;

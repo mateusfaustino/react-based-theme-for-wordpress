@@ -1,5 +1,4 @@
 import { connect } from "frontity";
-import NavBar from '../styleguide/molecules/navbar'
 import {Container, StyledLink, Description, Title, HeadContainer} from './styles'
 import { useSpacing } from "../../contexts/SpacingContext";
 const Header = ({ state }) => {
@@ -13,7 +12,7 @@ const Header = ({ state }) => {
         </StyledLink>
         <Description>{state.frontity.description}</Description>
       </Container>
-      <NavBar/>
+      
     </HeadContainer>
    
   );

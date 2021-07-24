@@ -2,7 +2,7 @@ import { connect, styled, decode } from "frontity";
 import Item from "./list-item";
 import Pagination from "./pagination";
 import { useSpacing } from "../../contexts/SpacingContext";
-
+import HeaderComponent from "../Header";
 const List = ({ state }) => {
   // Get the data of the current list.
   const data = state.source.get(state.router.link);
@@ -27,7 +27,7 @@ const List = ({ state }) => {
         </Header>
       )} 
       */}
-
+      <HeaderComponent/>
       {/* Iterate over the items of the list. */}
       {data.items.map(({ type, id }) => {
         const item = state.source[type][id];
