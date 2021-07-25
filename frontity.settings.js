@@ -16,10 +16,8 @@ const settings = {
     theme: {
       menu: [
         ["Home", "/"],
-        ["Books", "/books/"],
-        ["Films", "/films/"],
-        ["Events", "/tour/"],
-        ["About", "/about/"]
+        ["Cultura", "/category/cultura/"],
+        
       ],
       featured: {
         showOnList: true,
