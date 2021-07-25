@@ -10,7 +10,7 @@ const List = ({ state }) => {
   const margin = spacing.margin
   return (
     <Container margin={margin} maxWidth={maxWidth}>
-{/*       
+{/*        
       If the list is a taxonomy, we render a title.
       {data.isTaxonomy && (
         <Header>

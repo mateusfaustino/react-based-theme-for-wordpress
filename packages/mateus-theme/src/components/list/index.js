@@ -26,7 +26,7 @@ const List = ({ state, actions, libraries }) => {
               here:
                {/* {state.source.attachment[item.id].featured_media}  */}
             </p>
-            
+             
             
           </Link>
         )

@@ -30,7 +30,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "http://104.248.56.224/",
+          "url": "https://mateusfaustino.com.br",
           "postTypes": [
             {
               type: "destinations",
