@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { connect, styled } from "frontity";
-import Link from "../Link";
-
+import { connect} from "frontity";
+import Link from "../../../Link";
+import {Text} from './styles'
 /**
  * Pagination Component
  *
@@ -46,7 +46,3 @@ const Pagination = ({ state, actions }) => {
  */
 export default connect(Pagination);
 
-const Text = styled.em`
-  display: inline-block;
-  margin-top: 16px;
-`;

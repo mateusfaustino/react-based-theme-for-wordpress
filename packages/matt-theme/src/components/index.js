@@ -1,6 +1,6 @@
 import { Global, connect} from "frontity";
 import Switch from "@frontity/components/switch";
-import List from "./List";
+import List from "./List/Main";
 import Post from "./Post";
 import Loading from "./Loading";
 import Title from "./Title";

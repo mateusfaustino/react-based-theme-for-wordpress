@@ -1,8 +1,9 @@
 import { connect, styled, decode } from "frontity";
-import Item from "./list-item";
-import Pagination from "./pagination";
-import { useSpacing } from "../../contexts/SpacingContext";
-import HeaderComponent from "../Header";
+import Item from "./Item";
+import Pagination from "./Pagination";
+import { useSpacing } from "../../../contexts/SpacingContext";
+import HeaderComponent from "../../Header";
+import {Header, Container} from './styles'
 const List = ({ state }) => {
   // Get the data of the current list.
   const data = state.source.get(state.router.link);
@@ -41,17 +42,3 @@ const List = ({ state }) => {
 };
 
 export default connect(List);
-
-const Container = styled.section`
-  
-  list-style: none;
-  width: 100%;
-  max-width: ${({maxWidth})=>maxWidth}; 
-  margin: 0 ${({margin})=>margin};
-`;
-
-const Header = styled.h3`
-  font-weight: 300;
-  text-transform: capitalize;
-  color: rgba(12, 17, 43, 0.9);
-`;

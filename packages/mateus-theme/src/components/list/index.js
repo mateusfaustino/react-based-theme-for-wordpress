@@ -7,7 +7,7 @@ import FeaturedMedia from "../FeaturedMedia/index";
 const List = ({ state, actions, libraries }) => {
   const data = state.source.get(state.router.link)
   const Html2React = libraries.html2react.Component
-
+ 
   return (
     <Items>
       {data.items.map((item) => {

@@ -1,7 +1,7 @@
 import { connect, styled } from "frontity";
-import Link from "../Link";
-import FeaturedMedia from "../FeaturedMedia";
-import { PostDate } from "../Date";
+import Link from "../../../Link";
+import FeaturedMedia from "../../../FeaturedMedia";
+import { PostDate } from "../../../Date";
 
 /**
  * Item Component

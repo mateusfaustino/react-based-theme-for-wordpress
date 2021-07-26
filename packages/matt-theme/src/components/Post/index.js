@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { connect} from "frontity";
-import List from "../List";
+import List from "../List/Main";
 import FeaturedMedia from "../FeaturedMedia";
 import {Container, Title, StyledLink, Author, DateWrapper, Content, Excerpt} from './styles'
 import { useSpacing } from "../../contexts/SpacingContext";
