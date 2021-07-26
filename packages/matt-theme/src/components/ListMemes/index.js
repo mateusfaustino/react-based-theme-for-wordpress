@@ -1,15 +1,22 @@
+import { loadable } from "frontity";
 import { connect, styled, decode } from "frontity";
-import Item from "./list-item";
-import Pagination from "./pagination";
+import Item from "./Item";
+import Pagination from "./Pagination";
 import { useSpacing } from "../../contexts/SpacingContext";
 import HeaderComponent from "../Header";
+
+/**
+ * Codesplit the list component so it's not included if the users
+ * load a post directly.
+ */
+
 const List = ({ state }) => {
-  // Get the data of the current list.
+    // Get the data of the current list.
   const data = state.source.get(state.router.link);
   const {spacing,maxWidth} = useSpacing()
   const margin = spacing.margin
   return (
-    <Container margin={margin} maxWidth={maxWidth}>
+      <Container margin={margin} maxWidth={maxWidth}>
       
       If the list is a taxonomy, we render a title.
       {data.isTaxonomy && (
@@ -33,14 +40,14 @@ const List = ({ state }) => {
         const item = state.source[type][id];
         // Render one Item component for each one.
         const categorie = item.categories[0]
-        return categorie==6? <></>:<Item key={item.id} item={item} />
+        return <Item key={item.id} item={item} />
       })}
       <Pagination />
     </Container>
   );
 };
 
-export default connect(List);
+
 
 const Container = styled.section`
   
@@ -51,7 +58,9 @@ const Container = styled.section`
 `;
 
 const Header = styled.h3`
-  font-weight: 300;
-  text-transform: capitalize;
+font-weight: 300;
+text-transform: capitalize;
   color: rgba(12, 17, 43, 0.9);
 `;
+
+export default  connect(List);

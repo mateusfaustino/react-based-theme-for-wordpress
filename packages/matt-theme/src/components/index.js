@@ -9,6 +9,7 @@ import {globalStyles, Main} from './styles'
 import HeadTag from "./HeadTag";
 import  SpacingProvider from '../contexts/SpacingContext'
 import Navbar from '../components/styleguide/molecules/navbar'
+import ListMemes from "./ListMemes";
 const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
@@ -22,6 +23,7 @@ const Theme = ({ state }) => {
       <Main >
         <Switch>
           <Loading when={data.isFetching} />
+          <ListMemes when={state.router.link== '/category/memes/' } />
           <List when={data.isArchive} />
           <Post when={data.isPostType} active={data.isPostType}/>
           <PageError when={data.isError} />

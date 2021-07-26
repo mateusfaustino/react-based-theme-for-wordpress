@@ -17,6 +17,7 @@ const settings = {
       menu: [
         ["Home", "/"],
         ["Cultura", "/category/cultura/"],
+        ["Memes", "/category/memes/"],
         
       ],
       featured: {
