@@ -34,7 +34,7 @@ margin-bottom: 16px;
 
 export const Description = styled.h4`
   margin: 0;
-  ${typography.paragraph}
+  ${typography.header5}
   font-weight:200;
   color: ${palette.primary.main};
   `;
