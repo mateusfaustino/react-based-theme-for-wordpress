@@ -41,15 +41,17 @@ export const DateWrapper = styled.p`
  * selectors to style that HTML.
  */
 export const Content = styled.div`
-  color: rgba(12, 17, 43, 0.8);
+  color: #000;
   word-break: break-word;
   background:#fff;
+  margin-top:16px;
   * {
     max-width: 100%;
   }
-
+  
   p {
     ${typography.postContent}
+    color: #000;
   }
 
   img {
