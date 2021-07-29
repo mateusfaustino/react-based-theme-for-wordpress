@@ -16,8 +16,7 @@ const settings = {
     theme: {
       menu: [
         ["Home", "/"],
-        ["Cultura", "/category/cultura/"],
-        ["Memes", "/category/memes/"],
+        ["Portifólio", "/category/portifolio/"],
         
       ],
       featured: {
