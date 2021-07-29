@@ -30,6 +30,7 @@ align-items:center;
 justify-content:center;
 margin: 0;
 margin-bottom: 16px;
+
 `;
 
 export const Description = styled.h4`

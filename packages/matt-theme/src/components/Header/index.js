@@ -6,6 +6,7 @@ const Header = ({ state }) => {
   const margin = spacing.margin
   return (
     <HeadContainer margin={margin} maxWidth={maxWidth}>
+      
       <Container margin={margin} maxWidth={maxWidth}>
         <StyledLink link="/">
           <Title>{state.frontity.title}</Title>
