@@ -4,6 +4,7 @@ import Pagination from "./Pagination";
 import { useSpacing } from "../../../contexts/SpacingContext";
 import HeaderComponent from "../../Header";
 import {Header, Container} from './styles'
+import ListPerCategory from '../ListPerCategory/list'
 const List = ({ state }) => {
   // Get the data of the current list.
   const data = state.source.get(state.router.link);
@@ -34,9 +35,10 @@ const List = ({ state }) => {
         const item = state.source[type][id];
         // Render one Item component for each one.
         const categorie = item.categories[0]
-        return categorie==6? <></>:<Item key={item.id} item={item} />
+        return <Item key={item.id} item={item} />
       })}
       <Pagination />
+      <ListPerCategory/>
     </Container>
   );
 };
