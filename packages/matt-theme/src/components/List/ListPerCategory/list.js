@@ -20,13 +20,15 @@ const ListPerCategory = ({ state, actions, libraries }) => {
       {
           postsPerCategory.map(({ posts, category }, index) => (
             <div key={index}>
-                <Header>{category.name}</Header>
+                <Header>
+                  <h3>{category.name}</h3>
+                  <Link link={category.link}>
+                    <p>Veja mais</p>
+                  </Link>
+                </Header>
                 {posts.map((post, index) => (
                     <Item key={index} item={post} />  
                 ))}
-                <Link link={category.link}>
-                  <p>&gt;&gt; Veja mais posts de <strong>{category.name}</strong></p>
-                </Link>
             </div>
           ))
         }

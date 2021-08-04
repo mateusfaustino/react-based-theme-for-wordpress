@@ -13,7 +13,8 @@ import { PostDate } from "../../../Date";
  */
 const Item = ({ state, item }) => {
   const author = state.source.author[item.author];
-
+  const category = state.source.category[item.categories[0]].name
+  const categoryLink = state.source.category[item.categories[0]].link
   return (
     <Container link={item.link}>
       {/*
@@ -23,6 +24,13 @@ const Item = ({ state, item }) => {
       {state.theme.featured.showOnList && (
         <FeaturedMedia id={item.featured_media} />
       )}
+
+      <Link link={categoryLink}>
+        <Category>
+          {category}
+        </Category>
+      </Link>
+
       <Link link={item.link}>
         <Title dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
       </Link>
@@ -74,6 +82,19 @@ const AuthorName = styled.span`
     font-size: 0.75em;
     color: #6A6A6A;
 `;
+const Category = styled.span`
+  grid-area: category;
+  text-transform: uppercase;
+  line-height: 12px;
+  font-size: 12px;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.24s ease-in-out 0s;
+  margin-bottom: 5px;
+  font-weight: 700;
+  color: rgb(30, 115, 190) !important;
+}
+`;
 
 const StyledLink = styled(Link)`
   padding: 15px 0;
@@ -105,19 +126,21 @@ const Container = styled(Link)`
   display: grid;
   grid-template-columns: 40% 60%;
   grid-template-areas:
+  "featured category "
   "featured title "
   "featured excerpt "
   "featured details "
   ;
   gap:16px;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #cacaca;
   @media screen and (max-width: 530px) {
     grid-template-columns: 50% 50%;
   }
   @media screen and (max-width: 440px) {
     grid-template-areas:
-    "title "
-    "featured" 
+    "featured"
+    "category" 
+    "title "  
     "excerpt "
     "details "
     ; 

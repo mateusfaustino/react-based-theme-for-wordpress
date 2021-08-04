@@ -17,6 +17,7 @@ const settings = {
       menu: [
         ["Home", "/"],
         ["Portifólio", "/category/portifolio/"],
+        ["Línguas", "/category/linguas/"],
         
       ],
       featured: {

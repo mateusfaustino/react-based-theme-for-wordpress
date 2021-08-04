@@ -116,8 +116,8 @@ const Container = styled(Link)`
   }
   @media screen and (max-width: 440px) {
     grid-template-areas:
-    "title "
     "featured" 
+    "title "
     "excerpt "
     "details "
     ; 
