@@ -18,8 +18,9 @@ export const globalStyles = css`
     box-sizing: border-box;
   }
   iframe{
-    width:80vw;
+    width:100%;
     height:auto;
+    
   }
   li{
     list-style:none;

@@ -52,6 +52,19 @@ export const Content = styled.div`
   p {
     ${typography.postContent}
     color: #000;
+    margin-top:8px;
+  }
+  h1,h2,h3,h4,h5,h6{
+    margin-top:32px;
+  }
+  h1{
+    ${typography.header1}
+  }
+  h2{
+    ${typography.header2}
+  }
+  h3{
+    ${typography.header3}
   }
 
   img {
@@ -67,12 +80,17 @@ export const Content = styled.div`
     figcaption {
       font-size: 0.7em;
     }
+    
   }
-
+  
   iframe {
     display: block;
-    margin: auto;
+    margin: 0;
+    width:100%;
+    border:none;
+    
   }
+  
 
   blockquote {
     margin: 16px 0;

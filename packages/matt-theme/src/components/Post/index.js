@@ -33,8 +33,13 @@ const Post = ({ state, actions, libraries, active }) => {
   // Get the data of the author.
   const author = state.source.author[post.author];
   // Get a human readable date.
-  
+  const taxonomies = state.source.taxonomies
   // Get the html2react component.
+  const pt_br_version = state.source.pt_br_version[post.pt_br_version]
+  const en_version = state.source.en_version[post.en_version]
+  console.log("pt_br_version:",pt_br_version.name)
+  en_version?console.log("en_version:",en_version.name):console.log(" não há en_version")
+  console.log("post:",post)
   const Html2React = libraries.html2react.Component;
 
   /**

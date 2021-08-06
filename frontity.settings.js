@@ -8,6 +8,14 @@ const settings = {
     }
   },
   "packages": [
+{
+  name: "@frontity/google-analytics",
+  state: {
+    googleAnalytics: {
+      trackingId: "G-HCKRGNSG65",
+    },
+  },
+},
     
 {
   name: "matt-theme",
@@ -46,4 +54,5 @@ const settings = {
     "@frontity/html2react"
   ]
 };
+
 export default settings;
