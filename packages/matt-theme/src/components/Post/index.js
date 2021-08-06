@@ -6,6 +6,7 @@ import {Container, Title, StyledLink, Author, DateWrapper, Content, Excerpt} fro
 import { useSpacing } from "../../contexts/SpacingContext";
 import dayjs from "dayjs"
 import {PostDate} from '../Date/index'
+import LanguageWidget from "../LanguageWidget";
 /**
  * The Post component that Mars uses to render any kind of "post type", like
  * posts, pages, attachments, etc.
@@ -37,9 +38,20 @@ const Post = ({ state, actions, libraries, active }) => {
   // Get the html2react component.
   const pt_br_version = state.source.pt_br_version[post.pt_br_version]
   const en_version = state.source.en_version[post.en_version]
-  console.log("pt_br_version:",pt_br_version.name)
-  en_version?console.log("en_version:",en_version.name):console.log(" não há en_version")
-  console.log("post:",post)
+  const languagesArray = [];
+  
+  function addLanguage(taxonomy,language){
+    if (taxonomy){
+      const languagesObject = {
+        name:taxonomy.name,
+        language:language
+      }
+      languagesArray.push(languagesObject)
+    }
+  }
+  addLanguage(pt_br_version,'pt-br')
+  addLanguage(en_version,'en')
+  console.log("languagesArray:",languagesArray); 
   const Html2React = libraries.html2react.Component;
 
   /**
@@ -57,6 +69,7 @@ const Post = ({ state, actions, libraries, active }) => {
   // Load the post, but only if the data is ready.
   return data.isReady ? (
     <Container active={active} margin={margin} maxWidth={maxWidth}>
+      <LanguageWidget languages={languagesArray}/>
       <div>
         {/* Look at the settings to see if we should include the featured image */}
         {state.theme.featured.showOnPost && (
